@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Khang L.N. Nguyen — Resume Website" />
+  <title>Khang L.N. Nguyen | Resume</title>
+
+  <script>
+    (function () {
+      const t = localStorage.getItem("theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <!-- Brand + Avatar -->
+      <div class="brand">
+        <button class="avatar" id="avatarBtn" type="button" aria-label="Change avatar">
+          <img id="avatarImg" src="khang.png" alt="Avatar" />
+          <span class="avatar-ring" aria-hidden="true"></span>
+        </button>
+        <input id="avatarInput" type="file" accept="image/*" hidden />
+
+        <div class="brand-text">
+          <div class="name">Khang L.N. Nguyen</div>
+          <span class="sub">Lê Nguyễn Nguyên Khang • Resume Website</span>
+        </div>
+      </div>
+
+      <!-- Nav -->
+      <nav aria-label="Primary navigation" class="nav">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#skills">Skills</a>
+        <a href="#references">References</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button class="btn" id="themeBtn" type="button" title="Toggle theme (T)">
+          Theme <span class="kbd">T</span>
+        </button>
+        <button class="btn" id="printBtn" type="button" title="Print / Save as PDF (P)">
+          Print <span class="kbd">P</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero" id="about">
+      <div class="hero-inner">
+        <div>
+          <h1>Khang L.N. Nguyen</h1>
+          <p class="muted" style="margin-top:-6px">Lê Nguyễn Nguyên Khang (Vietnamese)</p>
+
+          <p>
+            M.Sc. student in Information Technology with hands-on experience in IT infrastructure,
+            NAS storage operations, and custom software development for workflow automation.
+          </p>
+
+          <div class="hero-badges" aria-label="Highlights">
+            <span class="pill">
+              Email:
+              <a id="emailLink" href="mailto:khangle.ds@gmail.com">
+                <strong id="emailText">khangle.ds@gmail.com</strong>
+              </a>
+            </span>
+            <span class="pill">English: intermediate (reading / writing / speaking)</span>
+          </div>
+
+          <div class="contact-row">
+            <a class="btn primary" href="mailto:khangle.ds@gmail.com">Email me</a>
+
+            <!-- GIỮ NGUYÊN nút CV theo yêu cầu -->
+            <a class="btn" href="https://drive.google.com/file/d/1-yAnnf4xDoTyuq0QkslddjRpnD-BLdHr/view" target="_blank" rel="noopener">Here's my CV</a>
+          </div>
+
+          <div class="small muted" id="toast" style="display:none;margin-top:8px"></div>
+        </div>
+
+        <div class="hero-right">
+          <button class="hero-avatar" id="heroAvatarBtn" type="button" aria-label="Change avatar">
+            <span class="hero-avatar-ring" aria-hidden="true"></span>
+            <img id="heroAvatarImg" src="khang.png" alt="Avatar" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW LAYOUT: Main center + Sidebar right -->
+    <div class="layout">
+      <!-- MAIN (center) -->
+      <div class="main">
+        <section class="card" id="education">
+          <h2>Education</h2>
+          <div class="timeline">
+            <div class="titem">
+              <div class="when">2024–Present</div>
+              <div>
+                <h3>M.Sc. in Information Technology</h3>
+                <div class="meta">Faculty of Information Technology</div>
+                <div class="meta">Ho Chi Minh City University of Technology (HUTECH), Vietnam</div>
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="when">2012–2015</div>
+              <div>
+                <h3>B.Eng. in Information Technology</h3>
+                <div class="meta">Faculty of Information Technology</div>
+                <div class="meta">Ho Chi Minh City University of Technology (HUTECH), Vietnam</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="experience">
+          <h2>Work Experience</h2>
+          <p class="muted small" style="margin-top:-6px">
+            Alongside my academic work, I have hands-on experience in software development.
+          </p>
+
+          <div class="timeline" style="margin-top:10px">
+            <div class="titem">
+              <div class="when">2017–Present</div>
+              <div>
+                <h3>IT Specialist — Landscape Architecture Creative Art Institute</h3>
+                <ul>
+                  <li>Directed IT operations and high-capacity NAS data storage.</li>
+                  <li>Led custom software development to optimize architectural workflows.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="titem">
+              <div class="when">2019–Present</div>
+              <div>
+                <h3>IT Manager — DE-SO Asia Design Consultant Joint Stock Company</h3>
+                <ul>
+                  <li>Managed daily IT infrastructure for the creative design team.</li>
+                  <li>Developed custom software tools to automate routine tasks.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="publications">
+          <h2>Publications</h2>
+
+          <ol class="publist" id="pubList">
+            <li class="pub-card" data-text="2026 zigzag persistence topology enhanced time series forecasting iccies 2026 vietnam">
+              <div class="pub-head">
+                <span class="pub-year">2026</span>
+                <span class="pub-title">A Novel Zigzag-Persistence-Based Framework for Topology-Enhanced Time-Series Forecasting.</span>
+              </div>
+              <div class="pub-venue">
+                The 2nd International Conference on Computational Intelligence in Engineering Science (ICCIES 2026),
+                02–04 April, Vietnam.
+              </div>
+              <div class="pub-auth muted small">Khang L.N. Nguyen; Bay Vo; Bui, Q.-T.</div>
+            </li>
+          </ol>
+        </section>
+      </div>
+
+      <!-- SIDEBAR (right) -->
+      <aside class="sidebar">
+        <section class="card" id="skills">
+          <h2>Skills</h2>
+
+          <div class="skill-group">
+            <div>
+              <div class="muted small" style="margin-bottom:6px">Languages</div>
+              <div class="skill-row">
+                <span class="tag">English</span>
+                <span class="tag muted">Intermediate (reading, writing, speaking)</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="muted small" style="margin-bottom:6px">Coding</div>
+              <div class="skill-row">
+                <span class="tag">Python</span>
+                <span class="tag">C#</span>
+                <span class="tag">HTML &amp; CSS</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="muted small" style="margin-bottom:6px">Databases</div>
+              <div class="skill-row">
+                <span class="tag">SQL Server</span>
+                <span class="tag">MySQL</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="muted small" style="margin-bottom:6px">Productivity</div>
+              <div class="skill-row">
+                <span class="tag">Microsoft Excel</span>
+                <span class="tag">Word</span>
+                <span class="tag">PowerPoint</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="muted small" style="margin-bottom:6px">Miscellaneous</div>
+              <div class="skill-row">
+                <span class="tag">Academic research</span>
+                <span class="tag">LaTeX typesetting</span>
+                <span class="tag">Publishing</span>
+              </div>
+            </div>
+
+            <div>
+              <div class="muted small" style="margin-bottom:6px">System</div>
+              <div class="skill-row">
+                <span class="tag">Network Administration</span>
+                <span class="tag">NAS Storage Management</span>
+                <span class="tag">IT Infrastructure</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="certifications">
+          <h2>Certifications</h2>
+          <div class="timeline">
+            <div class="titem" style="grid-template-columns: 90px 1fr">
+              <div class="when">2025</div>
+              <div>
+                <h3 style="margin:0;font-size:14px">Gemini Certified Educator</h3>
+                <div class="meta">Google for Education</div>
+              </div>
+            </div>
+
+            <div class="titem" style="grid-template-columns: 90px 1fr">
+              <div class="when">2026</div>
+              <div>
+                <h3 style="margin:0;font-size:14px">Gemini Certified Faculty</h3>
+                <div class="meta">Google for Education</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card" id="references">
+          <h2>References</h2>
+          <div class="titem" style="grid-template-columns: 1fr; gap:8px">
+            <div>
+              <h3 style="margin:0;font-size:14px">Dr. Quang-Thinh Bui</h3>
+              <div class="meta">Faculty of Education and Basic Sciences</div>
+              <div class="meta">Tien Giang University</div>
+              <div class="meta">119 Ap Bac, Ward 5, My Tho City, Dong Thap Province, Vietnam</div>
+              <div style="margin-top:8px">
+                <a class="btn" href="mailto:buiquangthinh@tgu.edu.vn">buiquangthinh@tgu.edu.vn</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Khang L.N. Nguyen — Resume Website.
+    </footer>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+</html>
